@@ -10,6 +10,9 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
   
+  @IBOutlet weak var filteringComplete: UISwitch!
+  
+  
     override func viewDidLoad() {
       super.viewDidLoad()
     }
@@ -23,18 +26,19 @@ class NotesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return NoteStore.shared.currentCategoryIndex
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+      print("The getCount method says \(NoteStore.shared.getCount())")
         return NoteStore.shared.getCount()
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: NoteTableViewCell.self)) as! NoteTableViewCell
 
-      cell.setupCell(NoteStore.shared.getNote(indexPath.row))
+      cell.setupCell(NoteStore.shared.getNote(at: indexPath.section, index: indexPath.row))
 
         return cell
     }
@@ -51,7 +55,7 @@ class NotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-          NoteStore.shared.deleteNote(indexPath.row)
+          NoteStore.shared.deleteNote(indexPath.section, index: indexPath.row)
           tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -87,7 +91,7 @@ class NotesTableViewController: UITableViewController {
   @IBAction func saveNoteDetail(_ segue: UIStoryboardSegue) {
     let noteDetailVC = segue.source as! NoteDetailViewController
     if let indexPath = tableView.indexPathForSelectedRow {
-      NoteStore.shared.updateNote(noteDetailVC.note, index: indexPath.row)
+      NoteStore.shared.updateNote(noteDetailVC.note, category: indexPath.section, index: indexPath.row)
       NoteStore.shared.sort()
       var indexPaths: [IndexPath] = []
       for index in 0...indexPath.row{
@@ -102,13 +106,5 @@ class NotesTableViewController: UITableViewController {
       let indexPath = IndexPath(row: 0, section: 0)
       tableView.insertRows(at: [indexPath], with: .automatic)
     }
-  }
-
-  
-  
-  
-  
-  
-  
-  
+  }  
 }
