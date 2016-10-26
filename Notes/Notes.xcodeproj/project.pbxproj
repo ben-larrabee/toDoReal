@@ -19,6 +19,7 @@
 		C778270E1DB7AC6D0059D61A /* My notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C778270D1DB7AC6D0059D61A /* My notes.rtf */; };
 		C77827101DB7C90B0059D61A /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778270F1DB7C90B0059D61A /* NoteStore.swift */; };
 		C77827121DB7FC7F0059D61A /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77827111DB7FC7F0059D61A /* ImageViewController.swift */; };
+		C7B85C331DBFF93C004E4C11 /* EditCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B85C321DBFF93C004E4C11 /* EditCategoryViewController.swift */; };
 		C7CE8E331DBFCBDA009386E1 /* NotesPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE8E321DBFCBDA009386E1 /* NotesPickerView.swift */; };
 		C7CE8E351DBFCD60009386E1 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE8E341DBFCD60009386E1 /* Categories.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		C778270D1DB7AC6D0059D61A /* My notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "My notes.rtf"; sourceTree = "<group>"; };
 		C778270F1DB7C90B0059D61A /* NoteStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
 		C77827111DB7FC7F0059D61A /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		C7B85C321DBFF93C004E4C11 /* EditCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCategoryViewController.swift; sourceTree = "<group>"; };
 		C7CE8E321DBFCBDA009386E1 /* NotesPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesPickerView.swift; sourceTree = "<group>"; };
 		C7CE8E341DBFCD60009386E1 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				C77826F31DB68FBC0059D61A /* AppDelegate.swift */,
+				C7B85C321DBFF93C004E4C11 /* EditCategoryViewController.swift */,
 				C77826F51DB68FBC0059D61A /* ViewController.swift */,
 				C77826F71DB68FBC0059D61A /* Main.storyboard */,
 				C77827111DB7FC7F0059D61A /* ImageViewController.swift */,
@@ -167,6 +170,7 @@
 				C77826F61DB68FBC0059D61A /* ViewController.swift in Sources */,
 				C77826F41DB68FBC0059D61A /* AppDelegate.swift in Sources */,
 				C77827061DB693460059D61A /* NotesTableViewController.swift in Sources */,
+				C7B85C331DBFF93C004E4C11 /* EditCategoryViewController.swift in Sources */,
 				C77827101DB7C90B0059D61A /* NoteStore.swift in Sources */,
 				C778270A1DB699FD0059D61A /* NoteTableViewCell.swift in Sources */,
 				C77827081DB698470059D61A /* Note.swift in Sources */,
