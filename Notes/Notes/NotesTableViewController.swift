@@ -24,16 +24,23 @@ class NotesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return NoteStore.shared.currentCategoryIndex
-    }
+  override func numberOfSections(in tableView: UITableView) -> Int {
+      // #warning Incomplete implementation, return the number of sections
+      //return NoteStore.shared.currentCategoryIndex
+    return 6
+  }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-      print("The getCount method says \(NoteStore.shared.getCount())")
-        return NoteStore.shared.getCount()
+      print("checking section \(section)")
+    if section < NoteStore.shared.currentCategoryIndex {
+      print("The getCount method for section \(section) says \(NoteStore.shared.getCount(section: section))")
+      return NoteStore.shared.getCount(section: section)
+    } else {
+      print("The section isn't implemented yet")
+      return 0
     }
+  }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: NoteTableViewCell.self)) as! NoteTableViewCell

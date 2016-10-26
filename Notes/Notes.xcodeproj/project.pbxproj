@@ -74,22 +74,22 @@
 		C77826F21DB68FBB0059D61A /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				C77826FC1DB68FBC0059D61A /* LaunchScreen.storyboard */,
+				C77827111DB7FC7F0059D61A /* ImageViewController.swift */,
+				C7CE8E321DBFCBDA009386E1 /* NotesPickerView.swift */,
 				C77826F31DB68FBC0059D61A /* AppDelegate.swift */,
-				C7B85C321DBFF93C004E4C11 /* EditCategoryViewController.swift */,
 				C77826F51DB68FBC0059D61A /* ViewController.swift */,
 				C77826F71DB68FBC0059D61A /* Main.storyboard */,
-				C77827111DB7FC7F0059D61A /* ImageViewController.swift */,
 				C77826FA1DB68FBC0059D61A /* Assets.xcassets */,
-				C77826FC1DB68FBC0059D61A /* LaunchScreen.storyboard */,
 				C77826FF1DB68FBC0059D61A /* Info.plist */,
-				C778270B1DB6AE610059D61A /* NoteDetailViewController.swift */,
 				C77827051DB693460059D61A /* NotesTableViewController.swift */,
+				C77827091DB699FD0059D61A /* NoteTableViewCell.swift */,
+				C778270B1DB6AE610059D61A /* NoteDetailViewController.swift */,
 				C77827071DB698470059D61A /* Note.swift */,
 				C7CE8E341DBFCD60009386E1 /* Categories.swift */,
-				C77827091DB699FD0059D61A /* NoteTableViewCell.swift */,
 				C778270F1DB7C90B0059D61A /* NoteStore.swift */,
 				C778270D1DB7AC6D0059D61A /* My notes.rtf */,
-				C7CE8E321DBFCBDA009386E1 /* NotesPickerView.swift */,
+				C7B85C321DBFF93C004E4C11 /* EditCategoryViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";

@@ -9,7 +9,7 @@
 import UIKit
 
 class ToDoCategory: NSObject, NSCoding{
-  var name = "Unclaimed"
+  var name: String = ""
   var image: UIImage? = #imageLiteral(resourceName: "generic")
   var categoryBG: UIColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
   
@@ -21,8 +21,10 @@ class ToDoCategory: NSObject, NSCoding{
     super.init()
   }
   
-  init(name: String) {
+  init(name: String, color: UIColor) {
+    print("begin instantiation of category")
     self.name = name
+    self.categoryBG = color
   }
   
   required init?(coder aDecoder: NSCoder) {

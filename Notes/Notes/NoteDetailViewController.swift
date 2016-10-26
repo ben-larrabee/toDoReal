@@ -62,7 +62,7 @@ class NoteDetailViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     note.title = noteTitleField.text!
     note.text = noteTextView.text
-    note.date = Date()
+    note.dateModified = Date()
     note.image = imageView.image
   }
 

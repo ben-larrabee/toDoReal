@@ -17,9 +17,6 @@ class EditCategoryViewController: UIViewController {
   @IBOutlet weak var editBlueBGColor: UISlider!
   let defaults = UserDefaults.standard
   
-  
-  
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     let colorData = defaults.data(forKey: "editBGColor")
@@ -45,19 +42,11 @@ class EditCategoryViewController: UIViewController {
     defaults.synchronize()
   }
 
-  
-  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
   
-  
-  
-  
-  
-  
-
     /*
     // MARK: - Navigation
 
@@ -70,6 +59,24 @@ class EditCategoryViewController: UIViewController {
   @IBAction func xColorChange(_ sender: AnyObject) {
     editCategoryBGColor.backgroundColor = UIColor(red: CGFloat(editRedBGColor.value), green: CGFloat(editGreenBGColor.value), blue: CGFloat(editBlueBGColor.value), alpha: 1.0)
   
+  }
+  @IBAction func addCategory(_ sender: AnyObject) {
+    if editCategoryName.text != "" {
+      NoteStore.shared.addCategory(newCategory: (ToDoCategory(name: editCategoryName.text!, color: editCategoryBGColor.backgroundColor!)))
+      let alertController = UIAlertController(title: "To Do Alert", message: "Your category was created.", preferredStyle: .alert)
+      let actionOk = UIAlertAction(title: "Dismiss",
+                                   style: .default,
+                                   handler: nil)
+      alertController.addAction(actionOk)
+      self.present(alertController, animated: true, completion: nil)
+    } else {
+      let alertController = UIAlertController(title: "To Do Alert", message: "A name is required.", preferredStyle: .alert)
+      let actionOk = UIAlertAction(title: "OK",
+                                   style: .default,
+                                   handler: nil)
+      alertController.addAction(actionOk)
+      self.present(alertController, animated: true, completion: nil)
+    }
   }
   
   

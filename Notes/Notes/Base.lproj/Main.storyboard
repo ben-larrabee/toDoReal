@@ -371,6 +371,9 @@
                                         <frame key="frameInset" minX="28" minY="28" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="plus"/>
+                                        <connections>
+                                            <action selector="addCategory:" destination="BVR-kb-UTX" eventType="touchUpInside" id="BeH-Zb-D7D"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
